@@ -775,8 +775,7 @@ section .container {
   overflow: hidden;
   z-index: 1;
   background: rgba(0, 0, 0, 0.6);
-  width: 300px; /* 添加的宽度 */
-  height: 200px; /* 添加的高度 */
+
 }
 
 .portfolio .portfolio-wrap::before {
