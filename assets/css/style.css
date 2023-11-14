@@ -8,9 +8,70 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+#spotlight {
+  position: fixed;
+  top: -1px;
+  bottom: -1px;
+  width: 100%;
+  z-index: 99999;
+  color: #fff;
+  background-color: #000;
+  opacity: 0;
+  overflow: hidden;
+  user-select: none;
+  transition: opacity 0.2s ease-out;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  contain: strict;
+  touch-action: none;
+  pointer-events: none;
+}
+
+:root { 
+  --green: #f0fff0; 
+  --white: #ffffff; 
+  --black: #010e1b; 
+} 
+ 
+* { 
+  color: var(--fontColor); 
+} 
+
+.light-theme { 
+  --bg: var(--green); 
+  --fontColor: var(--black); 
+  --btnBg: var(--black); 
+  --btnFontColor: var(--white); 
+  --headerTopBg: #8eccce;
+  --headerTopBghover: #a9f6f9;
+} 
+ 
+.dark-theme { 
+  --bg: var(--black); 
+  --fontColor: var(--green); 
+  --btnBg: var(--white); 
+  --btnFontColor: var(--black); 
+  --headerTopBg: #09203a;
+  --headerTopBghover: #0e335d;
+} 
+.btn { 
+  position: absolute; 
+  top: 20px; 
+  left: 250px; 
+  height: 50px; 
+  width: 50px; 
+  border-radius: 50%; 
+  border: none; 
+  color: var(--btnFontColor); 
+  background-color: var(--btnBg); 
+} 
+
+/* 添加点击效果 */ 
+.btn:focus { outline-style: none; } 
 body {
   font-family: "Open Sans", sans-serif;
-  color: rgb(212, 57, 57);
+  color: var(--fontColor);
   position: relative;
   background: transparent;
 }
@@ -18,7 +79,7 @@ body {
 body::before {
   content: "";
   position: fixed;
-  background: #010e1b;
+  background: var(--bg);
   background-size: cover;
   left: 0;
   right: 0;
@@ -72,7 +133,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header h1 a, #header h1 a:hover {
-  color: #dee2e6;
+  color: var(--fontColor);
   line-height: 1;
   display: inline-block;
 }
@@ -80,7 +141,7 @@ h1, h2, h3, h4, h5, h6 {
 #header h2 {
   font-size: 24px;
   margin-top: 20px;
-  color: #12d640;
+  color: var(--fontColor);
 }
 
 #header h2 span {
@@ -104,8 +165,8 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(255, 255, 255, 0.1);
-  color: #fff;
+  background: rgba(131, 126, 126, 0.308);
+  color: var(--fontColor);
   line-height: 1;
   margin-right: 8px;
   border-radius: 50%;
@@ -157,7 +218,7 @@ h1, h2, h3, h4, h5, h6 {
 .nav-menu a {
   display: block;
   position: relative;
-  color: #fff;
+  color: var(--fontColor);
   font-size: 19px;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
@@ -276,7 +337,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   top: 0;
   right: 0;
-  background: #09203a;
+  background: var(--headerTopBg);
 }
 
 #header.header-top .social-links, #header.header-top h2 {
@@ -348,7 +409,7 @@ section .container {
   margin: 0 0 20px 0;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #dee2e6;
+  color: var(--fontColor);
   font-family: "Poppins", sans-serif;
 }
 
@@ -357,7 +418,7 @@ section .container {
   width: 120px;
   height: 1px;
   display: inline-block;
-  background: #dee2e6;
+  background: var(--fontColor);
   margin: 4px 10px;
 }
 
@@ -368,7 +429,7 @@ section .container {
   font-weight: 700;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
-  color: #fff;
+  color: var(--fontColor);
 }
 
 /*--------------------------------------------------------------
@@ -482,7 +543,7 @@ section .container {
   display: flex;
   align-items: center;
   padding: 20px;
-  background: #09203a;
+  background: var(--headerTopBg);
   transition: ease-in-out 0.3s;
 }
 
@@ -499,11 +560,11 @@ section .container {
   padding: 0;
   line-height: 1;
   font-size: 16px;
-  color: #fff;
+  color: var(--fontColor);
 }
 
 .interests .icon-box:hover {
-  background: #042b56eb;
+  background:var(--headerTopBghover);
 }
 
 /*--------------------------------------------------------------
@@ -655,7 +716,7 @@ section .container {
 --------------------------------------------------------------*/
 .services .icon-box {
   text-align: center;
-  background: #09203a;
+  background: var(--headerTopBg);
   padding: 40px 40px;
   transition: all ease-in-out 0.3s;
   margin: 10px
@@ -687,7 +748,7 @@ section .container {
   top: -8px;
   height: 100%;
   width: 100%;
-  background: rgba(255, 255, 255, 0.15);
+  background: var(--bg);
   border-radius: 5px;
   transition: all .3s ease-out 0s;
   transform: translateZ(-1px);
@@ -754,8 +815,8 @@ section .container {
   font-weight: 600;
   line-height: 1;
   text-transform: uppercase;
-  color: #fff;
-  background: rgba(255, 255, 255, 0.1);
+  color: var(--fontColor);
+  background: rgba(131, 126, 126, 0.308);
   margin: 0 3px 10px 3px;
   transition: all 0.3s ease-in-out;
   border-radius: 4px;

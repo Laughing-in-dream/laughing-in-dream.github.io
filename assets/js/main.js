@@ -49,6 +49,32 @@
     }
   });
 
+  // new
+  const switcher = document.querySelector('.btn'); 
+ 
+// 使用监听功能监听按钮动态 
+switcher.addEventListener('click', function() { 
+
+    const body = document.body;
+
+  if (body.classList.contains('dark-theme')) {
+    body.classList.replace('dark-theme', 'light-theme');
+  } else {
+    body.classList.replace('light-theme', 'dark-theme');
+  }
+ 
+    // 使用 if 功能实现主题切换 
+    var className = document.body.className; 
+    if(className == "dark-theme") { 
+        this.textContent = "切换"; 
+    } 
+    else { 
+        this.textContent = "切换"; 
+    } 
+
+ 
+});  
+
   // Activate/show sections on load with hash links
   if (window.location.hash) {
     var initial_nav = window.location.hash;
