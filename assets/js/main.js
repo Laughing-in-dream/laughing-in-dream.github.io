@@ -191,28 +191,31 @@ switcher.addEventListener('click', function() {
   //   height: '90vh'
   // });
 
-  // /**
-  //  * Portfolio details slider
-  //  */
-  // new Swiper('.portfolio-details-slider', {
-  //   speed: 400,
-  //   loop: true,
-  //   autoplay: {
-  //     delay: 5000,
-  //     disableOnInteraction: false
-  //   },
-  //   pagination: {
-  //     el: '.swiper-pagination',
-  //     type: 'bullets',
-  //     clickable: true
-  //   }
-  // });
+  /**
+   * Portfolio details slider
+   */
 
-  $('ul.first').bsPhotoGallery();
+
+
 
   // Initiate venobox (lightbox feature used in portofilo)
   $(document).ready(function() {
     $('.venobox').venobox();
+    $('ul.first').bsPhotoGallery();
+    new Swiper('.portfolio-details-slider', {
+      speed: 400,
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true
+      }
+    });
   });
+  
 
 })(jQuery);
