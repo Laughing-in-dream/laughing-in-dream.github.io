@@ -953,9 +953,9 @@ section .container {
 # Portfolio Details
 --------------------------------------------------------------*/
 .portfolio-details {
-  color:   #1c7d32;
+  color:   var(--green);
   padding-top: 40px;
-  background: rgb(126, 106, 106);
+  background: var(--black);
   position: fixed;
   left: 0;
   right: 0;
