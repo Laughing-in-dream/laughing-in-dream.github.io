@@ -158,7 +158,7 @@
     border: none;
     width: 100%;
     height: 260px;
-    height: 70vh;
+    height: 90vh;
 }
 .venoframe.vbvid{
     height: 260px;
@@ -167,7 +167,7 @@
     .venoframe, .vbox-inline{
         width: 90%;
         height: 360px;
-        height: 70vh;
+        height: 90vh;
     }
     .venoframe.vbvid{
         width: 640px;
@@ -179,7 +179,7 @@
         max-width: 1200px;
         width: 80%;
         height: 540px;
-        height: 70vh;
+        height: 90vh;
     }
     .venoframe.vbvid{
         width: 960px;
