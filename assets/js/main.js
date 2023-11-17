@@ -65,20 +65,22 @@ switcher.addEventListener('click', function() {
   }
   console.log(document.body.className);
   localStorage.setItem('theme', document.body.className);
- 
-    // 使用 if 功能实现主题切换 
-    var className = document.body.className; 
-    if(className == "dark-theme") { 
-        this.textContent = "切换"; 
-    } 
-    else { 
-        this.textContent = "切换"; 
-    } 
 
  
 });  
 
+document.getElementById('icon-switch').addEventListener('change', function() {
+  const body = document.body;
 
+  if (body.classList.contains('dark-theme')) {
+      body.classList.replace('dark-theme', 'light-theme');
+  } else {
+      body.classList.replace('light-theme', 'dark-theme');
+  }
+
+  console.log(document.body.className);
+  localStorage.setItem('theme', document.body.className);
+});
 
 
 

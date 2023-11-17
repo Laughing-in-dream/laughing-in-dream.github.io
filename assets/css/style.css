@@ -8,6 +8,80 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+.toggle-switch {
+  position: fixed;
+  width: 100px; /* 增加开关条的长度 */
+  height: 40px;
+  top: 15px;
+  left: 10px;
+}
+.row {
+  margin-top: 20px;    /* 在元素上方添加 20px 的空间 */
+  margin-bottom: 20px; /* 在元素下方添加 20px 的空间 */
+  /* 其他样式 */
+}
+
+.toggle-input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch-label {
+  position: absolute;
+  cursor: pointer;
+  background-color: #baaa80; /* 浅棕色背景 */
+  border-radius: 20px;
+  height: 100%;
+  width: 100%;
+  transition: background-color .25s;
+}
+
+.switch-handle {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 38px; /* 滑动块的大小，根据需要调整 */
+  height: 38px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform .25s ease;
+}
+
+.sun-icon, .owl-icon {
+  position: absolute;
+  height: 80%;
+  width: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  transition: opacity 1s, left 1s; /* 添加位置过渡 */
+}
+
+.owl-icon {
+  left: 60px; /* 初始在滑动块的右侧 */
+  opacity: 0; /* 初始不可见 */
+}
+
+.sun-icon {
+  left: 63px; /* 初始在滑动块的左侧 */
+  opacity: 1; /* 初始可见 */
+}
+
+.toggle-input:checked + .switch-label .switch-handle {
+  transform: translateX(60px); /* 调整滑动块的移动距离 */
+}
+
+.toggle-input:checked + .switch-label .owl-icon {
+  opacity: 1; /* 打开时可见 */
+  left: 6px; /* 移动到左侧 */
+}
+
+.toggle-input:checked + .switch-label .sun-icon {
+  opacity: 0; /* 打开时不可见 */
+  left: 63px; /* 移动到右侧 */
+}
+
 #spotlight {
   position: fixed;
   top: -1px;
@@ -55,17 +129,7 @@
   --headerTopBg: #09203a;
   --headerTopBghover: #0e335d;
 } 
-.btn { 
-  position: absolute; 
-  top: 20px; 
-  left: 250px; 
-  height: 50px; 
-  width: 50px; 
-  border-radius: 50%; 
-  border: none; 
-  color: var(--btnFontColor); 
-  background-color: var(--btnBg); 
-} 
+
 
 /* 添加点击效果 */ 
 .btn:focus { outline-style: none; } 
@@ -719,14 +783,16 @@ section .container {
   background: var(--headerTopBg);
   padding: 40px 40px;
   transition: all ease-in-out 0.3s;
-  margin: 10px
+  margin: 10px;
+  color: var(--fontColor);
+  
 }
 
 .services .icon-box .icon {
   margin: 0 auto;
   width: 64px;
   height: 64px;
-  background: #1c7d32;
+  background: var(--headerTopBg);
   border-radius: 5px;
   transition: all .3s ease-out 0s;
   display: flex;
@@ -737,7 +803,7 @@ section .container {
 }
 
 .services .icon-box .icon i {
-  color: #fff;
+  color: var(--fontColor);
   font-size: 28px;
 }
 
@@ -761,7 +827,7 @@ section .container {
 }
 
 .services .icon-box h4 a {
-  color: #fff;
+  color: var(--fontColor);
 }
 
 .services .icon-box p {
@@ -771,12 +837,12 @@ section .container {
 }
 
 .services .icon-box:hover {
-  background: #042e5f;
+  background: var(--headerTopBghover);
   border-color: #1c7d32;
 }
 
 .services .icon-box:hover .icon {
-  background: #fff;
+  color: var(--fontColor);
 }
 
 .services .icon-box:hover .icon i {
@@ -815,8 +881,8 @@ section .container {
   font-weight: 600;
   line-height: 1;
   text-transform: uppercase;
-  color: #fff;
-  background: rgba(255, 255, 255, 0.1);
+  color:var(--fontColor);
+  background: rgba(131, 126, 126, 0.308);
   margin: 0 3px 10px 3px;
   transition: all 0.3s ease-in-out;
   border-radius: 4px;

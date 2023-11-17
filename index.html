@@ -28,6 +28,7 @@
   <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
@@ -60,9 +61,20 @@
   <!-- End Google Tag Manager (noscript) -->
   <!-- ======= Header ======= -->
   <header id="header" class="header-tops">
-  <div> 
-      <button class="btn" onclick="function()">切换深色</button> 
-  </div> 
+
+
+  <div class="btn toggle-switch" style=" position: fixed; top: 10; left: 10; ">
+    <input type="checkbox" id="icon-switch" class="toggle-input">
+    <label for="icon-switch" class="switch-label">
+        <!-- SVG 图标代码替换 -->
+        <!-- <svg class="sun-icon" viewBox="你的太阳图标视图框" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 72 72"><path fill="#FCEA2B" d="m66 36l-10.676 5.182l6.658 9.824l-11.84-.864l.864 11.84l-9.825-6.658L36 66l-5.182-10.676l-9.824 6.658l.864-11.84l-11.84.864l6.658-9.825L6 36l10.677-5.182l-6.659-9.824l11.84.864l-.864-11.84l9.825 6.658L36 6l5.182 10.677l9.824-6.659l-.864 11.84l11.84-.864l-6.658 9.825z"/><g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"><circle cx="36" cy="35.95" r="19.828"/><path d="m66 36l-10.676 5.182l6.658 9.824l-11.84-.864l.864 11.84l-9.825-6.658L36 66l-5.182-10.676l-9.824 6.658l.864-11.84l-11.84.864l6.658-9.825L6 36l10.677-5.182l-6.659-9.824l11.84.864l-.864-11.84l9.825 6.658L36 6l5.182 10.677l9.824-6.659l-.864 11.84l11.84-.864l-6.658 9.825z"/></g></svg> -->
+        <svg class="sun-icon" viewBox="你的太阳图标视图框" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><g fill="none"><path fill="#FF822D" d="M13.638 3.202a2.936 2.936 0 0 1 4.724 0a2.936 2.936 0 0 0 3.25 1.055a2.936 2.936 0 0 1 3.822 2.778a2.936 2.936 0 0 0 2.008 2.763a2.936 2.936 0 0 1 1.46 4.494a2.936 2.936 0 0 0 0 3.416a2.936 2.936 0 0 1-1.46 4.494a2.936 2.936 0 0 0-2.008 2.763a2.936 2.936 0 0 1-3.823 2.778a2.936 2.936 0 0 0-3.249 1.055a2.936 2.936 0 0 1-4.724 0a2.936 2.936 0 0 0-3.25-1.055a2.936 2.936 0 0 1-3.822-2.778a2.936 2.936 0 0 0-2.008-2.763a2.936 2.936 0 0 1-1.46-4.494a2.936 2.936 0 0 0 0-3.416a2.936 2.936 0 0 1 1.46-4.494a2.936 2.936 0 0 0 2.008-2.763a2.936 2.936 0 0 1 3.823-2.778a2.936 2.936 0 0 0 3.249-1.055Z"/><path fill="#FCD53F" d="M25.062 21.232c-2.89 5.005-9.29 6.72-14.294 3.83c-5.005-2.89-6.72-9.29-3.83-14.294c2.89-5.005 9.29-6.72 14.294-3.83c5.005 2.89 6.72 9.29 3.83 14.294Z"/></g></svg>
+        <svg class="owl-icon" viewBox="你的猫头鹰图标视图框"  xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><g fill="none"><path fill="#6D4534" d="M26.713 2a4.79 4.79 0 0 1-1.145 3.122A6.124 6.124 0 0 1 27 9.062c0 1.528-.307 2.727-.86 3.666c.554 1.314.86 2.757.86 4.272a11 11 0 0 1-5.933 9.766l.12 1.234l-5.228.53l-5.15-.53l.123-1.235A10.999 10.999 0 0 1 5 17c0-1.546.319-3.017.894-4.351c-.524-.927-.814-2.102-.814-3.588c0-1.5.543-2.877 1.432-3.939A4.81 4.81 0 0 1 5.366 2h5.649c1.077 0 1.987.357 2.768 1h4.504c.78-.643 1.634-1 2.71-1h5.716Z"/><path fill="#FFDEA7" d="M7.84 14.596C9.78 15.74 12.573 16 15.67 16h.74c3.061 0 5.828-.253 7.765-1.366c.295.858.455 1.779.455 2.736C24.63 22.064 20.77 28 16 28c-4.77 0-8.63-5.936-8.63-10.63c0-.97.165-1.904.47-2.774Z"/><path fill="#FF822D" d="M14.545 13h2.99a1.5 1.5 0 0 0-1.49-1.5c-.827 0-1.5.673-1.5 1.5ZM16 28c1.83 0 3.556-.447 5.074-1.238c.47.737.783 1.582.895 2.49c.05.41-.29.748-.704.748h-10.53c-.414 0-.755-.337-.704-.748a5.985 5.985 0 0 1 .897-2.488A10.953 10.953 0 0 0 16 28Z"/><path fill="#1C1C1C" d="M14 9a4 4 0 1 1-8 0a4 4 0 0 1 8 0Zm12 0a4 4 0 1 1-8 0a4 4 0 0 1 8 0Z"/><path fill="#FCD53F" d="M13.748 9.514a3.305 3.305 0 1 1-6.61 0a3.305 3.305 0 0 1 6.61 0Zm11.093 0a3.305 3.305 0 1 1-6.61 0a3.305 3.305 0 0 1 6.61 0Z"/><path fill="#533566" d="M12.479 9.514a2.035 2.035 0 1 1-4.071 0a2.035 2.035 0 0 1 4.07 0Zm11.093 0a2.035 2.035 0 1 1-4.07 0a2.035 2.035 0 0 1 4.07 0Z"/></g></svg>
+        <span class="switch-handle"></span>
+    </label>
+</div>
+
+
 
     <div class="container">
 
@@ -75,8 +87,9 @@
           <li><a href="#education"> <span>Education</span></a></li>
           <li><a href="#experience"> <span>Experience</span></a></li>
           <li><a href="#stories"> <span>Stories</span></a></li>
-          <li><a href="#skills"> <span>Skills</span></a></li>
-          <li><a href="https://drive.google.com/file/d/1pT-Nk6AxY9ZOWBizuDb4htA3IiUF_fSe/view?usp=sharing" target="_blank"> <span>Resume</span></a></li>
+          <li><a href="#skills"> <span>Skills</span></a>         <i class="fas fa-owl owl-icon"></i> <!-- 猫头鹰图标 --></li>
+          
+          <li><a href="../laughing-in-dream.github.io/assets/img/resume wenkai.pdf" target="_blank"> <span>Resume</span></a></li>
           <!-- <li><a href="#links"> <span>Resume & Links</span></a></li> -->
  
           
@@ -109,18 +122,53 @@
           <img src="assets/img/profile.jpg" class="img-fluid" alt="">
         </div>
         <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-          <p>Focused and enthusiastic developer with a keen interest in software development and artificial intelligence. By comprehensive exposure
-            to the underlying concepts and applying them vividly to various projects, my love for these domains came into being.
-            I am a passionate individual who thrives to build and apply algorithms to solve real-world industry problems.
-          </p>
           <header data-v-762a23fd="" class="card__header"><h3 data-v-762a23fd="" class="card__title prevent--drag">
-            Their Personality
-          </h3> <h4 data-v-762a23fd="" class="card__subtitle prevent--drag"><span class="type__full prevent--drag">Entrepreneur (ESTP-A)</span></h4></header>
-          <div data-v-762a23fd="" id="anim_z34w4uo42g" class="sp-animation card__image"></div>
+            Me</header>
+          <p>Hello, my name is Wenkai Wang, and I am a graduate student at the University of Washington. Welcome to my website, where you will get a glimpse into my life and learn about my story.
+
+            If you are new here, this is a great opportunity to get to know me. If you're already familiar with who I am, perhaps you'll discover a different side of me. 
+
+            
+          </p>
+
+          <p> I am passionate about programming, development, and data analysis, and also have a keen interest in economics and finance. 
+            </p>
+          
+            <p> 
+              In my time outside of studying, I enjoy traveling, hiking, fitness, sports, gaming, life, and exploring new worlds. 
+              I enjoy making friends, especially with people from different cultures, countries, and backgrounds. I love chatting with diverse individuals and exploring the unknown. Even when discussing familiar topics, I strive to understand them from multiple perspectives and appreciate different viewpoints.</p>
         </div>
+      </div>
 
+      <div class="row">
 
+        <div class="col-lg-9 pt-4 pt-lg-0 content" data-aos="fade-left">
 
+          <header data-v-762a23fd="" class="card__header"><h3 data-v-762a23fd="" class="card__title prevent--drag">
+            Entrepreneur (ESTP-A)
+          <h5 data-v-762a23fd="" class="card__subtitle prevent--drag"><span class="type__full prevent--drag">As an MBTI explorer, my adventurous spirit thrives on continuously learning new things and experiencing new aspects of life, ensuring I never find the world boring.</span></h4></header>
+          <p>My friends see me as an enthusiastic, outgoing person with a great sense of humor. I'm known for my love of telling jokes and maintaining a positive, optimistic attitude towards life. I often share insights and life philosophies, always aiming to spread my optimism to others. In my view, nothing is too serious to overcome, and happiness is of paramount importance. My goal is to bring joy to everyone around me.
+
+          For me, the key to making friends is a combination of sincerity and respect.
+          </p>
+        </div>
+        <div class="col-lg-2" data-aos="fade-right">
+          <img src="assets/img/estp.png" class="img-fluid" alt="">
+        </div>
+      </div>
+
+      <div class="row">
+
+        <div class="col-lg-12 pt-4 pt-lg-0 content" data-aos="fade-left">
+
+          <header data-v-762a23fd="" class="card__header"><h3 data-v-762a23fd="" class="card__title prevent--drag">
+          </header>
+          <p>Thank you for joining me on this exciting journey, and I hope you find something here that sparks your curiosity and fuels your own passions.
+          </p>
+        </div>
+        <!-- <div class="col-lg-4" data-aos="fade-right">
+          <img src="assets/img/estp.png" class="img-fluid" alt="">
+        </div> -->
       </div>
 
     </div><!-- End About Me -->
@@ -131,6 +179,9 @@
       <div class="section-title">
         <h2>Interests</h2>
       </div>
+      <p data-v-762a23fd="" class="card__subtitle prevent--drag"><span class="type__full prevent--drag">I have a wide range of interests that span both physical activities and intellectual pursuits. I enjoy shooting, swimming, rock climbing, badminton, table tennis, mountain climbing, and various other outdoor activities. Fitness and exploration are also passions of mine, as I love engaging in different kinds of sports.
+
+        Beyond physical activities, I have a keen interest in gaming, anime, internet memes, movies, traveling and cooking.</span></p>
 
       <div class="row">
         <div class="col-lg-3 col-md-4">
@@ -198,30 +249,30 @@
         <div class="col-lg-12" data-aos="fade-up" style="display: inline-block;">
 
 
-            <div class="col-md-4 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100" style="padding:0px 0px;padding-bottom: 5px;display: inline-block;">
-              <img src="assets/img/education/ASU.jpg" class="img-fluid" alt="">
+            <div class="col-md-4 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100" style="padding:0px 0px;padding-bottom: 5px; display: inline-block;">
+              <img src="assets/img/education/uw.webp" class="img-fluid" alt="">
               <!-- <h4 style="text-align:left;"><a href="https://www.asu.edu/" target="_blank" style="color:#12d640">Arizona State University</a><br> </h4> -->
-              <p style="text-align:left;color:#fff;padding: 5px 10px;"><em>MS in Computer Science</em></p>
-              <h5 style="text-align:left;padding: 0px 10px;">Janurary 2021 - Present</h5>
-              <h6 style="text-align:left;color:#fff;padding: 0px 10px;">Relevant Coursework</h6>
-              <ul style="text-align:left;color:#fff;">
-                <li>Distributed Database Systems</li>
-                <li>Cloud Computing</li>
-                <li>Foundation Of Algorithms</li>
+              <p style="text-align:left;padding: 5px 10px;"><em>MS in Computational Finance and Risk Management</em></p>
+              <h5 style="text-align:left;padding: 0px 10px;">September 2022 - January 2024</h5>
+              <h6 style="text-align:left;padding: 0px 10px;">Relevant Coursework</h6>
+              <ul style="text-align:left;">
+                <li>Machine Learning in Finance</li>
+                <li>Financial Data Science</li>
+                <li>Financial Derivatives</li>
+                <li>Cyber Security</li>
               </ul>
             </div>
-            <div class="col-md-4 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100" style="padding:0px 0px;padding-bottom: 5px;display: inline-block;">
-              <img src="assets/img/education/au.png" class="img-fluid" alt="">
+            <div class="col-md-4 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100" style="padding:0px 0px;padding-bottom: 5px; display: inline-block;">
+              <img src="assets/img/education/sues.jpg"  class="img-fluid" alt="">
               <!-- <h4 style="text-align:left;"><a href="https://ahduni.edu.in/" target="_blank" style="color:#12d640">Ahmedabad University</a><br> </h4> -->
-              <p style="text-align:left;color:#fff;padding: 5px 10px;"><em>B.Tech. in Information and Communication Technology</em></p>
-              <h5 style="text-align:left;padding: 0px 10px;">July 2014 - May 2018</h5>
-              <h6 style="text-align:left;color:#fff;padding: 0px 10px;">Relevant Coursework</h6>
-              <ul style="text-align:left;color:#fff;">
-                <!-- <li>Data Structures &amp; Algorithms</li> -->
-                <li>Database Management Systems</li>
-                <!-- <li>Operating Systems</li> -->
-                <li>Algorithms &amp; Optimization for Big Data</li>
-                <li>Machine Learning</li>
+              <p style="text-align:left;padding: 5px 10px;"><em>B.Engineering in Data Science</em></p>
+              <h5 style="text-align:left;padding: 0px 10px;">August 2018 - June 2022</h5>
+              <h6 style="text-align:left;padding: 0px 10px;">Relevant Coursework</h6>
+              <ul style="text-align:left;">
+                <li>Data Structures & Algorithms</li>
+                <li>Data Collection and Visualization</li>
+                <li>Software Engineering</li>
+                <li>Cloud Computing Technology</li>
                 <!-- <li>Computer Vision</li> -->
               </ul>
             </div>
@@ -230,90 +281,117 @@
       </div>
 
 
-    <div class="portfolio">
     <div class="container">
       <div class="section-title">
-        <h2>Online Certification</h2>
+        <h2>Other</h2>
       </div>
 
-      <div class="row portfolio-container" style="position: relative; height: 437.75px;">
+      <div class="row">
+        <div class="col-lg-12" data-aos="fade-up" style="display: inline-block;">
 
-         <div class="col-lg-4 col-md-6 portfolio-item filter-app" style="position: absolute; left: 0px; top: 0px;">
-          <div class="portfolio-wrap">
-            <img src="assets/img/certification/stanford.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Machine Learning</h4>
-              <div class="portfolio-links">
-                <a href="https://www.coursera.org/account/accomplishments/certificate/2BTJ636Q2E93?utm_medium=certificate&amp;utm_source=link&amp;utm_campaign=copybutton_certificate/" target="_blank" title="Certificate"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-           </div>
-          </div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app" style="position: absolute; left: 370px; top: 0px;">
-          <div class="portfolio-wrap">
-            <img src="assets/img/certification/stanford.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Algorithms-Design and Analysis</h4>
-              <div class="portfolio-links">
-                <a href="https://www.coursera.org/account/accomplishments/certificate/6THRQXYE9EHZ?utm_medium=certificate&amp;utm_source=link&amp;utm_campaign=copybutton_certificate" target="_blank" title="Certificate"><i class="bx bx-link"></i></a>
-              </div>
+            <div class="col-md-4 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100" style="padding:0px 0px;padding-bottom: 5px; display: inline-block;">
+              <img src="assets/img/education/hu.jpg" class="img-fluid" alt="">
+              <!-- <h4 style="text-align:left;"><a href="https://www.asu.edu/" target="_blank" style="color:#12d640">Arizona State University</a><br> </h4> -->
+              <p style="text-align:left;padding: 5px 10px;"><em>Exchange Study in Computer Science</em></p>
+              <h5 style="text-align:left;padding: 0px 10px;">August 2020 - January 2021</h5>
+              <h6 style="text-align:left;padding: 0px 10px;">Relevant Coursework</h6>
+              <ul style="text-align:left;">
+                <li>Artificial Intelligence</li>
+                <li>Database</li>
+                <li>Data Mining</li>
+              </ul>
             </div>
           </div>
+    </div>
+    </div>
+
+
+    <!-- <div class="portfolio">
+      <div class="container">
+        <div class="section-title">
+          <h2>Online Certification</h2>
         </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app" style="position: absolute; left: 740px; top: 0px;">
-          <div class="portfolio-wrap">
-            <img src="assets/img/certification/ucsd.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Algorithmic Toolbox</h4>
-              <div class="portfolio-links">
-                <a href="https://coursera.org/share/98bbfb990484fac370d5e5ed14334ea4" target="_blank" title="Certificate"><i class="bx bx-link"></i></a>
+  
+        <div class="row portfolio-container" style="position: relative; height: 437.75px;">
+  
+           <div class="col-lg-4 col-md-6 portfolio-item filter-app" style="position: absolute; left: 0px; top: 0px;">
+            <div class="portfolio-wrap">
+              <img src="assets/img/certification/stanford.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Machine Learning</h4>
+                <div class="portfolio-links">
+                  <a href="https://www.coursera.org/account/accomplishments/certificate/2BTJ636Q2E93?utm_medium=certificate&amp;utm_source=link&amp;utm_campaign=copybutton_certificate/" target="_blank" title="Certificate"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+             </div>
+            </div>
+  
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app" style="position: absolute; left: 370px; top: 0px;">
+            <div class="portfolio-wrap">
+              <img src="assets/img/certification/stanford.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Algorithms-Design and Analysis</h4>
+                <div class="portfolio-links">
+                  <a href="https://www.coursera.org/account/accomplishments/certificate/6THRQXYE9EHZ?utm_medium=certificate&amp;utm_source=link&amp;utm_campaign=copybutton_certificate" target="_blank" title="Certificate"><i class="bx bx-link"></i></a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-project" style="position: absolute; left: 0px; top: 218.875px;">
-          <div class="portfolio-wrap">
-            <img src="assets/img/certification/ibm.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Deep Learning with Tensorflow</h4>
-              <div class="portfolio-links">
-                <a href="https://drive.google.com/file/d/1FSwPt19EzY_tpvqkE6igtLf3gccKcssC/view?usp=sharing" target="_blank" title="Certificate"><i class="bx bx-link"></i></a>
+  
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app" style="position: absolute; left: 740px; top: 0px;">
+            <div class="portfolio-wrap">
+              <img src="assets/img/certification/ucsd.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Algorithmic Toolbox</h4>
+                <div class="portfolio-links">
+                  <a href="https://coursera.org/share/98bbfb990484fac370d5e5ed14334ea4" target="_blank" title="Certificate"><i class="bx bx-link"></i></a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-project" style="position: absolute; left: 370px; top: 218.875px;">
-          <div class="portfolio-wrap">
-            <img src="assets/img/certification/ibm.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Machine Learning with Python</h4>
-              <div class="portfolio-links">
-                <a href="https://drive.google.com/file/d/1gimySw_NPzCJ54dqZ2j2wYyz-JDOg-S0/view?usp=sharing" target="_blank" title="Certificate"><i class="bx bx-link"></i></a>
+  
+          <div class="col-lg-4 col-md-6 portfolio-item filter-project" style="position: absolute; left: 0px; top: 218.875px;">
+            <div class="portfolio-wrap">
+              <img src="assets/img/certification/ibm.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Deep Learning with Tensorflow</h4>
+                <div class="portfolio-links">
+                  <a href="https://drive.google.com/file/d/1FSwPt19EzY_tpvqkE6igtLf3gccKcssC/view?usp=sharing" target="_blank" title="Certificate"><i class="bx bx-link"></i></a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-project" style="position: absolute; left: 740px; top: 218.875px;">
-          <div class="portfolio-wrap">
-            <img src="assets/img/certification/dai.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Neural Networks and Deep Learning</h4>
-              <div class="portfolio-links">
-                <a href="https://www.coursera.org/account/accomplishments/certificate/ELXZ6FE2BU7X?utm_medium=certificate&amp;utm_source=link&amp;utm_campaign=copybutton_certificate/" target="_blank" title="Certificate"><i class="bx bx-link"></i></a>
+  
+          <div class="col-lg-4 col-md-6 portfolio-item filter-project" style="position: absolute; left: 370px; top: 218.875px;">
+            <div class="portfolio-wrap">
+              <img src="assets/img/certification/ibm.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Machine Learning with Python</h4>
+                <div class="portfolio-links">
+                  <a href="https://drive.google.com/file/d/1gimySw_NPzCJ54dqZ2j2wYyz-JDOg-S0/view?usp=sharing" target="_blank" title="Certificate"><i class="bx bx-link"></i></a>
+                </div>
               </div>
             </div>
           </div>
+  
+  
+          <div class="col-lg-4 col-md-6 portfolio-item filter-project" style="position: absolute; left: 740px; top: 218.875px;">
+            <div class="portfolio-wrap">
+              <img src="assets/img/certification/dai.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Neural Networks and Deep Learning</h4>
+                <div class="portfolio-links">
+                  <a href="https://www.coursera.org/account/accomplishments/certificate/ELXZ6FE2BU7X?utm_medium=certificate&amp;utm_source=link&amp;utm_campaign=copybutton_certificate/" target="_blank" title="Certificate"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+  
         </div>
-
       </div>
-    </div>
-    </div>
+      </div> -->
+  
 
   </section>
   <!-- End Education Section -->
@@ -574,15 +652,11 @@
       </div>
       <div class="row">
         <div class="col-md-3 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-          <a href="https://drive.google.com/file/d/1iHBNV2UkH5LkhAP-1hYRZ2Ez_BQ6g4S7/view?usp=sharing" target="_blank"><div class="icon"><i class="icofont-page"></i></div></a>
-          <h4 class="title"><a href="https://drive.google.com/file/d/1iHBNV2UkH5LkhAP-1hYRZ2Ez_BQ6g4S7/view?usp=sharing" target="_blank">Resume</a></h4>
+          <a href="../laughing-in-dream.github.io/assets/img/resume wenkai.pdf" target="_blank"><div class="icon"><i class="icofont-page"></i></div></a>
+          <h4 class="title"><a href="../laughing-in-dream.github.io/assets/img/resume wenkai.pdf" target="_blank">Resume</a></h4>
           <p class="description" style="color:#fff;">The link contains downloadable resume</p>
         </div>
-        <div class="col-md-3 mt-4 mt-md-0 icon-box" data-aos="fade-up">
-          <a href="https://github.com/rajaprerak/LeetCode_Problems" target="_blank"><div class="icon"><i class="icofont-link"></i></div></a>
-          <h4 class="title"><a href="https://github.com/rajaprerak/LeetCode_Problems" target="_blank">LeetCode Repository</a></h4>
-          <p class="description" style="color:#fff;"> The github repository contains leetcode problems solution in python.</p>
-        </div>
+
         <!-- <div class="col-md-3 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
           <a href="https://techingenious.herokuapp.com/" target="_blank"><div class="icon"><i class="icofont-page"></i></div></a>
           <h4 class="title"><a href="https://techingenious.herokuapp.com/" target="_blank">Blog</a></h4>
